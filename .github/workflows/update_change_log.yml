@@ -20,7 +20,7 @@ jobs:
         node -e "const fs = require('fs');
         let json = require('./changeLog.json');
         json['lastUpdated'] = new Date().toISOString();
-        fs.writeFileSync('./path/to/your-file.json', JSON.stringify(json, null, 2));"
+        fs.writeFileSync('./changeLog.json', JSON.stringify(json, null, 2));"
 
     - name: Configure Git
       run: |
