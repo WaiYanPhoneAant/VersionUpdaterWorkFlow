@@ -24,8 +24,8 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
+        git config --global user.name "WaiYanPhoneAant"
+        git config --global user.email "wypa07@gmail.com"
 
     - name: Commit and push changes
       run: |
