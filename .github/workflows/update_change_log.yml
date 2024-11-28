@@ -31,6 +31,6 @@ jobs:
       run: |
         git add ./changeLog.json
         git commit -m "Update JSON file on commit to main"
-        git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/WaiYanPhoneAant/VersionUpdaterWorkFlow.git
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/WaiYanPhoneAant/VersionUpdaterWorkFlow.git
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
