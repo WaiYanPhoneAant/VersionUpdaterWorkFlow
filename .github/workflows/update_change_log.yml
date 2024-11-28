@@ -1,36 +1,36 @@
-name: Update JSON on Commit
+# name: Update JSON on Commit
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  update-json:
-    runs-on: ubuntu-latest
+# jobs:
+#   update-json:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+#     steps:
+#     - name: Checkout repository
+#       uses: actions/checkout@v3
 
 
-    - name: Update JSON file
-      run: |
-        echo "Updating JSON file..."
-        node -e "const fs = require('fs');
-        let json = require('./changeLog.json');
-        json['lastUpdated'] = new Date().toISOString();
-        fs.writeFileSync('./changeLog.json', JSON.stringify(json, null, 2));"
+#     - name: Update JSON file
+#       run: |
+#         echo "Updating JSON file..."
+#         node -e "const fs = require('fs');
+#         let json = require('./changeLog.json');
+#         json['lastUpdated'] = new Date().toISOString();
+#         fs.writeFileSync('./changeLog.json', JSON.stringify(json, null, 2));"
 
-    - name: Configure Git
-      run: |
-        git config --global user.name "WaiYanPhoneAant"
-        git config --global user.email "wypa07@gmail.com"
+#     - name: Configure Git
+#       run: |
+#         git config --global user.name "WaiYanPhoneAant"
+#         git config --global user.email "wypa07@gmail.com"
 
-    - name: Commit and push changes
-      run: |
-        git add ./changeLog.json
-        git commit -m "Update JSON file on commit to main"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#     - name: Commit and push changes
+#       run: |
+#         git add ./changeLog.json
+#         git commit -m "Update JSON file on commit to main"
+#         git push
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
