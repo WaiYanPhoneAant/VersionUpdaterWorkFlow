@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '18.x'  # Ensure you are using Node.js 18.x or higher
+          node-version: '18.x'
       - run: npm install
       - run: npx semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Pass the GitHub token here
