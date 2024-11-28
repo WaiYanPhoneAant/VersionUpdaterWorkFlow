@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "semantic-release": "^20.0.0",
-    "@semantic-release/cli": "^5.0.0"
+    "semantic-release": "^20.1.3"
   }
 }
