@@ -26,11 +26,11 @@ jobs:
       run: |
         git config --global user.name "WaiYanPhoneAant"
         git config --global user.email "wypa07@gmail.com"
-
+    
     - name: Commit and push changes
       run: |
         git add ./changeLog.json
         git commit -m "Update JSON file on commit to main"
-        git push
+        git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/WaiYanPhoneAant/VersionUpdaterWorkFlow.git
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
