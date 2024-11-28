@@ -1,19 +1,19 @@
-name: Release
+# name: Release
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  release:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
-      - run: npm install
-      - run: npx semantic-release
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Pass the GitHub token here
+# jobs:
+#   release:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: '18.x'
+#       - run: npm install
+#       - run: npx semantic-release
+#         env:
+#           GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Pass the GitHub token here
